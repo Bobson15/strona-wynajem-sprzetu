@@ -136,15 +136,12 @@ window.openModal = function (id) {
 
     state.selectedEquipment = item;
 
-    // Update UI
     mImg.src = item.image;
     mName.textContent = item.name;
     mRate.textContent = item.price;
 
-    // Recalculate
     calculatePrice();
 
-    // Show
     document.body.style.overflow = 'hidden';
     modal.classList.add('active');
 }
@@ -155,7 +152,7 @@ function closeHandler() {
     setTimeout(() => {
         successOverlay.classList.remove('active');
         form.reset();
-        // reset dates
+
         const today = new Date().toISOString().split('T')[0];
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
@@ -176,7 +173,6 @@ function calculatePrice() {
     const start = new Date(inputStart.value);
     const end = new Date(inputEnd.value);
 
-    // Handle invalid dates
     if (end < start) {
         inputEnd.value = inputStart.value;
         end.setTime(start.getTime());
@@ -185,7 +181,6 @@ function calculatePrice() {
     const diffTime = Math.abs(end - start);
     let days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-    // Minimum 1 day
     if (days === 0) days = 1;
 
     state.days = days;
@@ -193,13 +188,11 @@ function calculatePrice() {
     state.endDate = end;
     state.delivery = chkDelivery.checked;
 
-    // Price calculation
     let total = days * state.selectedEquipment.price;
     if (state.delivery) {
         total += 50;
     }
 
-    // Animate Price Change
     animateValue(elTotal, parseInt(elTotal.innerText) || 0, total, 300);
     animateValue(elDays, parseInt(elDays.innerText) || 0, days, 300);
     elBtnTotal.textContent = total + ' zł';
@@ -214,7 +207,7 @@ function animateValue(obj, start, end, duration) {
         if (progress < 1) {
             window.requestAnimationFrame(step);
         } else {
-            obj.innerHTML = end; // ensure exact value
+            obj.innerHTML = end;
         }
     };
     window.requestAnimationFrame(step);
