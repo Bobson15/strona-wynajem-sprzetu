@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenRent | Wynajem Nowoczesnego Sprzętu Ogrodowego</title>
+    <meta name="description" content="Wynajem sprzętu ogrodowego online. Szybka rezerwacja, najniższe ceny i natychmiastowe sprawdzanie dostępności.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="leaf"></i>
+                GreenRent
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works">Jak to działa</a>
+                <a href="#fleet">Nasz Sprzęt</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+            <button class="nav-cta" onclick="document.getElementById('fleet').scrollIntoView({behavior:'smooth'})">Wypożycz</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Zadbaj o swój ogród bez <span class="highlight">kupowania</span> sprzętu.</h1>
+            <p>Wynajmij profesjonalne maszyny na dni. Wybierz narzędzie, sprawdź termin i ciesz się pięknym trawnikiem.</p>
+            <div class="hero-actions">
+                <button class="primary-btn" onclick="document.getElementById('fleet').scrollIntoView({behavior:'smooth'})">Zobacz Sprzęt</button>
+                <div class="hero-trust">
+                    <div class="avatars">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="User">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="User">
+                    </div>
+                    <span>Ponad <strong>500+</strong> zadowolonych klientów</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <div class="hero-glass-card">
+                <div class="glass-header">
+                    <i data-lucide="calendar-check"></i>
+                    Dostępne od zaraz
+                </div>
+                <h3>Kosiarka Spalinowa STIGA</h3>
+                <p>80 zł / dzień</p>
+                <button class="glass-btn" onclick="document.getElementById('fleet').scrollIntoView({behavior:'smooth'})">Rezerwuj</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1592424001807-6bbacc7265be?auto=format&fit=crop&w=800&q=80" alt="Zadbany Ogród" class="hero-bg">
+        </div>
+    </header>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="steps-section">
+        <div class="section-header">
+            <h2>Jak działamy?</h2>
+            <p>Wypożyczenie sprzętu jest proste jak 1, 2, 3</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                <h3>1. Wybierz Sprzęt</h3>
+                <p>Przejrzyj nasz katalog maszyn i dobierz sprzęt idealny do prac w Twoim ogrodzie.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i data-lucide="calendar"></i></div>
+                <h3>2. Wyznacz Termin</h3>
+                <p>Nasz dynamiczny kalkulator od razu wskaże ostateczny koszt za wypożyczenie maszyn na wybrany czas.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon"><i data-lucide="truck"></i></div>
+                <h3>3. Odbierz i Pracuj</h3>
+                <p>Sprzęt czeka na Ciebie w naszej placówce lub dowieziemy go pod Twoje drzwi (+50 zł).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet & Categories -->
+    <section id="fleet" class="fleet-section">
+        <div class="section-header">
+            <h2>Nasz Sprzęt</h2>
+            <p>Szybko wylicz cenę i zarezerwuj maszynę na swój termin</p>
+        </div>
+        
+        <!-- Filters -->
+        <div class="fleet-filters">
+            <button class="filter-btn active" data-filter="all">Wszystko</button>
+            <button class="filter-btn" data-filter="koszenie">Koszenie</button>
+            <button class="filter-btn" data-filter="przycinanie">Przycinanie</button>
+            <button class="filter-btn" data-filter="czyszczenie">Czyszczenie</button>
+        </div>
+
+        <div class="fleet-grid" id="equipment-grid">
+            <!-- Dynamic Equipment Cards Generated By JS -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="reviews-section">
+        <div class="section-header">
+            <h2>Opinie naszych klientów</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">
+                    <i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i>
+                </div>
+                <p>"Świetna opcja kalkulatora na stronie. Od razu wiedziałem ile zapłacę i sprzęt był gotowy. Polecam w 100%!"</p>
+                <div class="reviewer">- Adam Kowalski</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">
+                    <i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i>
+                </div>
+                <p>"Wynajmowałam wertykulator, dowóz był na czas, narzędzie bardzo profesjonalne, trawnik znów żyje."</p>
+                <div class="reviewer">- Maria Nowak</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h2>Gdzie nas znaleźć?</h2>
+                <p>Odbierz swój sprzęt z naszej centrali, tuż pod lasem.</p>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> ul. Ogrodnicza 15, Zielona Górka</li>
+                    <li><i data-lucide="phone"></i> +48 123 456 789</li>
+                    <li><i data-lucide="mail"></i> kontakt@greenrent.pl</li>
+                </ul>
+                <div class="working-hours">
+                    <strong>Godziny otwarcia:</strong><br>
+                    Pon - Pt: 8:00 - 18:00<br>
+                    Sobota: 9:00 - 14:00
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.3543850567!2d20.925974!3d52.2330653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1689260655000!5m2!1spl!2spl" width="100%" height="100%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2026 GreenRent - Twój sprzęt w ogrodzie. Wszelkie prawa zastrzeżone.
+        </div>
+    </footer>
+
+    <!-- Booking Modal / Calculator -->
+    <div class="modal-overlay" id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal"><i data-lucide="x"></i></button>
+            <div class="modal-grid">
+                <!-- Left: Equipment Info -->
+                <div class="modal-sidebar">
+                    <img src="" alt="Sprzęt" id="modal-equipment-img">
+                    <div class="modal-equipment-details">
+                        <h3 id="modal-equipment-name">Kosiarka Spalinowa</h3>
+                        <p class="modal-badge"><i data-lucide="zap"></i> Gotowe do pracy</p>
+                        <div class="modal-pricing-info">
+                            <span class="price-rate"><span id="modal-daily-rate">80</span> zł</span> <span class="price-unit">/ dzień</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Calculator & Form -->
+                <div class="modal-form-area">
+                    <h2>Zarezerwuj i Wylicz</h2>
+                    <p class="subtitle">Wybierz daty, aby sprawdzić ostateczną cenę.</p>
+                    
+                    <form id="reservation-form">
+                        <div class="form-row dates-row">
+                            <div class="input-group">
+                                <label for="start-date">Od kiedy?</label>
+                                <input type="date" id="start-date" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="end-date">Do kiedy?</label>
+                                <input type="date" id="end-date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row options-row">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="delivery-option">
+                                <span class="custom-checkbox"></span>
+                                <div>
+                                    <span class="opt-title">Dowóz pod drzwi</span>
+                                    <span class="opt-price">+50 zł (jednorazowo)</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="calc-divider"></div>
+
+                        <!-- Live Cost Display -->
+                        <div class="calculator-result">
+                            <div class="calc-row">
+                                <span>Ilość dni:</span>
+                                <strong id="calc-days">1</strong>
+                            </div>
+                            <div class="calc-row">
+                                <span>Kaucja (płatna przy odbiorze):</span>
+                                <strong>200 zł</strong>
+                            </div>
+                            <div class="calc-row total-row">
+                                <span>Całkowity Koszt:</span>
+                                <div class="total-price-wrapper">
+                                    <span id="total-cost" class="total-amount">80</span> <span class="currency">zł</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row user-data">
+                            <input type="text" id="user-name" placeholder="Imię i nazwisko" required>
+                            <input type="email" id="user-email" placeholder="Adres e-mail" required>
+                            <input type="tel" id="user-phone" placeholder="Nr telefonu" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-reservation">Zarezerwuj Teraz - <span id="btn-total">80 zł</span></button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Success Message Overlay -->
+            <div class="success-overlay" id="success-message">
+                <div class="success-content">
+                    <div class="success-icon"><i data-lucide="check-circle"></i></div>
+                    <h2>Rezerwacja Potwierdzona!</h2>
+                    <p>Dziękujemy <span id="success-name"></span>. Twój sprzęt będzie na Ciebie czekał we wskazanym terminie.</p>
+                    <button class="primary-btn" id="close-success">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
